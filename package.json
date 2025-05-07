@@ -1,6 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
+  "type": "module",
   "description": "1st project",
   "main": "index.js",
   "scripts": {
@@ -12,6 +13,9 @@
   },
   "author": "Oleg Bogachev",
   "license": "ISC",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "bugs": {
     "url": "https://github.com/dearboleg/frontend-project-44/issues"
   },
