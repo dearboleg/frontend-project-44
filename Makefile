@@ -11,3 +11,6 @@ publish: # Публикация
 
 lint: # Запуск eslint 
 			npx eslint .
+
+brain-even: # Запуск node bin/brain-even.js
+			node bin/brain-even.js
