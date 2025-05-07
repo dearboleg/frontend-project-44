@@ -14,7 +14,8 @@
   "author": "Oleg Bogachev",
   "license": "ISC",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "bugs": {
     "url": "https://github.com/dearboleg/frontend-project-44/issues"
