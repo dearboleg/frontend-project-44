@@ -14,3 +14,6 @@ lint: # Запуск eslint
 
 brain-even: # Запуск node bin/brain-even.js
 			node bin/brain-even.js
+
+brain-calc: # Запуск node bin/brain-calc.js
+			node bin/brain-calc.js
