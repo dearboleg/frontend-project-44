@@ -5,4 +5,6 @@
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=dearboleg_frontend-project-44)](https://sonarcloud.io/summary/new_code?id=dearboleg_frontend-project-44)
 [![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=dearboleg_frontend-project-44)
 
-https://asciinema.org/a/v47gkMTval7SKLoB914O6fCe0
+brain-even: https://asciinema.org/a/v47gkMTval7SKLoB914O6fCe0
+
+brain-calc: https://asciinema.org/a/jXIIcezYWxKyzo7clqqWm0mse
