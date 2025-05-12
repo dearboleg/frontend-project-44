@@ -17,3 +17,6 @@ brain-even: # Запуск node bin/brain-even.js
 
 brain-calc: # Запуск node bin/brain-calc.js
 			node bin/brain-calc.js
+
+brain-gcd: # Запуск node bin/brain-gcd.js
+			node bin/brain-gcd.js
