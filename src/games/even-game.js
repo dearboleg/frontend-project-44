@@ -19,7 +19,6 @@ const playEvenGame = () => {
 
     const userAnswer = readlineSync.question("Your answer: ");
 
-    // Передаем параметры в generalLogic
     const continueGame = generalLogic(userAnswer, correctAnswer, userName);
 
     if (!continueGame) {

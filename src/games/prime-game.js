@@ -1,6 +1,6 @@
 import readlineSync from "readline-sync";
 import greetUser from "../cli.js";
-import { generalLogic } from "../index.js"; // Обеспечьте, чтобы эта функция принимала и возвращала ожидаемые значения
+import { generalLogic } from "../index.js";
 
 const isPrime = (num) => {
   if (num <= 1) return false;
@@ -22,11 +22,10 @@ const playPrimeGame = () => {
 
   while (correctAnswers < 3) {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
-
+    const correctAnswer = isPrime(randomNumber) ? "yes" : "no";
     console.log(`Question: ${randomNumber}`);
 
     const userAnswer = readlineSync.question("Your answer: ");
-    const correctAnswer = isPrime(randomNumber) ? "yes" : "no";
 
     const continueGame = generalLogic(userAnswer, correctAnswer, userName);
 
