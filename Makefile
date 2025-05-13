@@ -23,3 +23,6 @@ brain-gcd: # Запуск node bin/brain-gcd.js
 
 brain-progression: # Запуск node bin/brain-progression.js
 			node bin/brain-progression.js
+
+brain-prime: # Запуск node bin/brain-prime.js
+			node bin/brain-prime.js
