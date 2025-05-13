@@ -20,3 +20,6 @@ brain-calc: # Запуск node bin/brain-calc.js
 
 brain-gcd: # Запуск node bin/brain-gcd.js
 			node bin/brain-gcd.js
+
+brain-progression: # Запуск node bin/brain-progression.js
+			node bin/brain-progression.js
