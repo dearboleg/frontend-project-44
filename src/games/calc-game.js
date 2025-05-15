@@ -1,42 +1,42 @@
-import { runGame } from "../index.js";
+import { runGame } from '../index.js'
 
-const gameDescription = "What is the result of the expression?";
+const gameDescription = 'What is the result of the expression?'
 
 const calculateExpression = (num1, num2, operator) => {
   switch (operator) {
-    case "+":
-      return num1 + num2;
-    case "-":
-      return num1 - num2;
-    case "*":
-      return num1 * num2;
+    case '+':
+      return num1 + num2
+    case '-':
+      return num1 - num2
+    case '*':
+      return num1 * num2
     default:
-      break;
+      break
   }
-};
+}
 
 const getGameData = () => {
-  const operators = ["+", "-", "*"];
-  const randomOperator =
+  const operators = ['+', '-', '*']
+  const randomOperator
     // eslint-disable-next-line
-    operators[Math.floor(Math.random() * operators.length)];
+    = operators[Math.floor(Math.random() * operators.length)];
   // eslint-disable-next-line
   const num1 = Math.floor(Math.random() * 100) + 1;
   // eslint-disable-next-line
   const num2 = Math.floor(Math.random() * 100) + 1;
-  const expression = `${num1} ${randomOperator} ${num2}`;
+  const expression = `${num1} ${randomOperator} ${num2}`
   const correctAnswer = calculateExpression(
     num1,
     num2,
-    randomOperator
-  ).toString();
+    randomOperator,
+  ).toString()
 
   return {
     question: expression,
     correctAnswer,
-  };
-};
+  }
+}
 
-const playCalcGame = () => runGame(gameDescription, getGameData);
+const playCalcGame = () => runGame(gameDescription, getGameData)
 
-export default playCalcGame;
+export default playCalcGame
