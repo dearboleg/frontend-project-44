@@ -17,8 +17,8 @@ const calculateExpression = (num1, num2, operator) => {
 
 const getGameData = () => {
   const operators = ["+", "-", "*"];
-  // eslint-disable-next-line
   const randomOperator =
+    // eslint-disable-next-line
     operators[Math.floor(Math.random() * operators.length)];
   // eslint-disable-next-line
   const num1 = Math.floor(Math.random() * 100) + 1;
