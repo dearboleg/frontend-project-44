@@ -1,7 +1,7 @@
-import { runGame } from '../index.js';
+import { runGame } from "../index.js";
 
-const gameDescription
-  = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameDescription =
+  'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   if (num <= 1) return false;
@@ -16,8 +16,9 @@ const isPrime = (num) => {
 };
 
 const getGameData = () => {
+  // eslint-disable-next-line
   const randomNumber = Math.floor(Math.random() * 100) + 1;
-  const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
+  const correctAnswer = isPrime(randomNumber) ? "yes" : "no";
 
   return {
     question: randomNumber.toString(),

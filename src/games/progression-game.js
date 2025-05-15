@@ -1,6 +1,6 @@
-import { runGame } from '../index.js';
+import { runGame } from "../index.js";
 
-const gameDescription = 'What number is missing in the progression?';
+const gameDescription = "What number is missing in the progression?";
 
 const generateProgression = (length, start, step) => {
   const progression = [];
@@ -12,17 +12,20 @@ const generateProgression = (length, start, step) => {
 
 const hideElement = (progression, hiddenIndex) => {
   const progressionWithPlaceholder = progression.slice();
-  progressionWithPlaceholder[hiddenIndex] = '..';
+  progressionWithPlaceholder[hiddenIndex] = "..";
   return {
-    question: progressionWithPlaceholder.join(' '),
+    question: progressionWithPlaceholder.join(" "),
     correctAnswer: progression[hiddenIndex].toString(),
   };
 };
 
 const getGameData = () => {
   const length = 10;
+  // eslint-disable-next-line
   const start = Math.floor(Math.random() * 10) + 1;
+  // eslint-disable-next-line
   const step = Math.floor(Math.random() * 10) + 1;
+  // eslint-disable-next-line
   const hiddenIndex = Math.floor(Math.random() * length);
 
   const progression = generateProgression(length, start, step);

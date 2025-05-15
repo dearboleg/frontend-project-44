@@ -1,6 +1,6 @@
-import { runGame } from '../index.js';
+import { runGame } from "../index.js";
 
-const gameDescription = 'Find the greatest common divisor of given numbers.';
+const gameDescription = "Find the greatest common divisor of given numbers.";
 
 const findGCD = (a, b) => {
   while (b > 0) {
@@ -12,7 +12,9 @@ const findGCD = (a, b) => {
 };
 
 const getGameData = () => {
+  // eslint-disable-next-line
   const num1 = Math.floor(Math.random() * 100) + 1;
+  // eslint-disable-next-line
   const num2 = Math.floor(Math.random() * 100) + 1;
   const correctAnswer = findGCD(num1, num2).toString();
 
