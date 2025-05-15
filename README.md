@@ -1,5 +1,17 @@
 ### Hexlet tests and linter status:
 
+Первый проект на Хекслет.
+
+Описание: Пять математических мини игр.
+
+Минимальные требования:
+Node.js
+npm
+
+Установка:
+git clone git@github.com:dearboleg/frontend-project-44.git
+cd frontend-project-44
+
 [![Actions Status](https://github.com/dearboleg/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/dearboleg/frontend-project-44/actions)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=dearboleg_frontend-project-44&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=dearboleg_frontend-project-44)
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=dearboleg_frontend-project-44)](https://sonarcloud.io/summary/new_code?id=dearboleg_frontend-project-44)

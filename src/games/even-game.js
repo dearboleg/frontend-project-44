@@ -1,34 +1,22 @@
-import readlineSync from 'readline-sync'
-import greetUser from '../cli.js'
-import { generalLogic } from '../index.js'
+import { runGame } from '../index.js';
+
+const gameDescription
+  = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (number) => {
-  return number % 2 === 0
-}
+  return number % 2 === 0;
+};
 
-const playEvenGame = () => {
-  const userName = greetUser()
-  console.log('Answer "yes" if the number is even, otherwise answer "no".')
+const getGameData = () => {
+  const randomNumber = Math.floor(Math.random() * 100) + 1;
+  const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
 
-  let correctAnswers = 0
+  return {
+    question: randomNumber.toString(),
+    correctAnswer,
+  };
+};
 
-  while (correctAnswers < 3) {
-    // eslint-disable-next-line
-    const randomNumber = Math.floor(Math.random() * 100) + 1;
-    const correctAnswer = isEven(randomNumber) ? 'yes' : 'no'
-    console.log(`Question: ${randomNumber}`)
+const playEvenGame = () => runGame(gameDescription, getGameData);
 
-    const userAnswer = readlineSync.question('Your answer: ')
-
-    const continueGame = generalLogic(userAnswer, correctAnswer, userName)
-
-    if (!continueGame) {
-      return
-    }
-
-    correctAnswers += 1
-  }
-  console.log(`Congratulations, ${userName}!`)
-}
-
-export default playEvenGame
+export default playEvenGame;

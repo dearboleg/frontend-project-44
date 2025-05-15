@@ -1,42 +1,27 @@
-import readlineSync from 'readline-sync'
-import greetUser from '../cli.js'
-import { generalLogic } from '../index.js'
+import { runGame } from '../index.js';
+
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const findGCD = (a, b) => {
   while (b > 0) {
-    const temp = b
-    b = a % b
-    a = temp
+    const temp = b;
+    b = a % b;
+    a = temp;
   }
-  return a
-}
+  return a;
+};
 
-const playGCDGame = () => {
-  const userName = greetUser()
-  console.log('Find the greatest common divisor of given numbers.')
+const getGameData = () => {
+  const num1 = Math.floor(Math.random() * 100) + 1;
+  const num2 = Math.floor(Math.random() * 100) + 1;
+  const correctAnswer = findGCD(num1, num2).toString();
 
-  let correctAnswers = 0
+  return {
+    question: `${num1} ${num2}`,
+    correctAnswer,
+  };
+};
 
-  while (correctAnswers < 3) {
-    // eslint-disable-next-line
-    const num1 = Math.floor(Math.random() * 100) + 1;
-    // eslint-disable-next-line
-    const num2 = Math.floor(Math.random() * 100) + 1;
+const playGCDGame = () => runGame(gameDescription, getGameData);
 
-    console.log(`Question: ${num1} ${num2}`)
-
-    const userAnswer = readlineSync.question('Your answer: ')
-    const correctAnswer = findGCD(num1, num2).toString()
-
-    const continueGame = generalLogic(userAnswer, correctAnswer, userName)
-
-    if (!continueGame) {
-      return
-    }
-
-    correctAnswers += 1
-  }
-  console.log(`Congratulations, ${userName}!`)
-}
-
-export default playGCDGame
+export default playGCDGame;
