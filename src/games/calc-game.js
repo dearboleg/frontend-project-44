@@ -1,4 +1,4 @@
-import { runGame } from '../index.js'
+import { runGame, generateRandomNumber } from '../index.js'
 
 const gameDescription = 'What is the result of the expression?'
 
@@ -20,10 +20,10 @@ const getGameData = () => {
   const randomOperator
     // eslint-disable-next-line
     = operators[Math.floor(Math.random() * operators.length)];
-  // eslint-disable-next-line
-  const num1 = Math.floor(Math.random() * 100) + 1;
-  // eslint-disable-next-line
-  const num2 = Math.floor(Math.random() * 100) + 1;
+
+  const num1 = generateRandomNumber()
+
+  const num2 = generateRandomNumber()
   const expression = `${num1} ${randomOperator} ${num2}`
   const correctAnswer = calculateExpression(
     num1,
