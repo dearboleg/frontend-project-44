@@ -1,4 +1,4 @@
-import { runGame } from '../index.js'
+import { runGame, generateRandomNumberSmallStep } from '../index.js'
 
 const gameDescription = 'What number is missing in the progression?'
 
@@ -21,10 +21,10 @@ const hideElement = (progression, hiddenIndex) => {
 
 const getGameData = () => {
   const length = 10
-  // eslint-disable-next-line
-  const start = Math.floor(Math.random() * 10) + 1;
-  // eslint-disable-next-line
-  const step = Math.floor(Math.random() * 10) + 1;
+
+  const start = generateRandomNumberSmallStep()
+
+  const step = generateRandomNumberSmallStep()
   // eslint-disable-next-line
   const hiddenIndex = Math.floor(Math.random() * length);
 
