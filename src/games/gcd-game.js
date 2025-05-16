@@ -1,4 +1,4 @@
-import { runGame } from '../index.js'
+import { runGame, generateRandomNumber } from '../index.js'
 
 const gameDescription = 'Find the greatest common divisor of given numbers.'
 
@@ -12,10 +12,9 @@ const findGCD = (a, b) => {
 }
 
 const getGameData = () => {
-  // eslint-disable-next-line
-  const num1 = Math.floor(Math.random() * 100) + 1;
-  // eslint-disable-next-line
-  const num2 = Math.floor(Math.random() * 100) + 1;
+  const num1 = generateRandomNumber()
+
+  const num2 = generateRandomNumber()
   const correctAnswer = findGCD(num1, num2).toString()
 
   return {

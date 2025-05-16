@@ -1,4 +1,4 @@
-import { runGame } from '../index.js'
+import { runGame, generateRandomNumber } from '../index.js'
 
 const gameDescription
   = 'Answer "yes" if the number is even, otherwise answer "no".'
@@ -8,8 +8,7 @@ const isEven = (number) => {
 }
 
 const getGameData = () => {
-  // eslint-disable-next-line
-  const randomNumber = Math.floor(Math.random() * 100) + 1;
+  const randomNumber = generateRandomNumber()
   const correctAnswer = isEven(randomNumber) ? 'yes' : 'no'
 
   return {
